@@ -14,15 +14,16 @@
 
 
 <ion-content padding>
-
-  <ion-item *ngFor="let assessment of assessments" (click)="assessmentSelected(assessment)">
-    <button ion-button class="courseQueueButtons notAvailableButton" *ngIf="!assessment.available">Not available</button>
-    <button ion-button class="courseQueueButtons enqueueButton" *ngIf="!assessment.queued && assessment.available" (click)="enqueue(assessment)">Enqueue</button>
-    <button ion-button class="courseQueueButtons dequeueButton" *ngIf="assessment.queued && assessment.available" (click)="dequeue(assessment)">Dequeue</button>
-    <h2>{{ assessment.name }}</h2>
-    <p>Due date: {{ assessment.dueDate }}</p>
-  </ion-item>
-
+  <ion-list>
+    <ion-item *ngFor="let assessment of assessments" (click)="assessmentSelected(assessment)">
+      <button ion-button item-end class="courseQueueButtons notAvailableButton" *ngIf="!assessment.available">Not available</button>
+      <button ion-button item-end class="courseQueueButtons enqueueButton" *ngIf="!assessment.queued && assessment.available" (click)="enqueue(assessment)">Enqueue</button>
+      <button ion-button item-end class="courseQueueButtons dequeueButton" *ngIf="assessment.queued && assessment.available" (click)="dequeue(assessment)">Dequeue</button>
+      <h2>{{ assessment.name }}</h2>
+      <p>Due date: {{ assessment.dueDate }}</p>
+    </ion-item>
+  </ion-list>
+  
   <!--<ion-list>
     <button ion-item *ngFor="let assessment of assessments" (click)="assessmentSelected(assessment)">
       {{ assessment.name }}

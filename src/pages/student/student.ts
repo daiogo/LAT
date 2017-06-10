@@ -15,20 +15,32 @@ import { CoursePage } from '../course/course';
 })
 export class StudentPage {
 
-  courses: any[];
+  coursesAsStudent: any[];
+  coursesAsInstructor: any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     
-    this.courses = [];
+    this.coursesAsStudent = [];
+    this.coursesAsInstructor = [];
     
-    this.courses.push({
+    this.coursesAsInstructor.push({
       name: "Intro to CS",
       code: "CS101"
     });
 
-    this.courses.push({
+    this.coursesAsInstructor.push({
       name: "Object-oriented Programming",
       code: "CS102"
+    });
+
+    this.coursesAsStudent.push({
+      name: "Data Structures",
+      code: "CS201"
+    });
+
+    this.coursesAsStudent.push({
+      name: "Algorithms",
+      code: "CS202"
     });
 
   }

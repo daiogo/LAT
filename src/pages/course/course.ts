@@ -23,6 +23,7 @@ export class CoursePage {
     this.course = this.navParams.get('course');
     this.assessments = []; // Call for backend later
 
+    // Test dummy data
     this.assessments.push({
       name: "Lab 1",
       dueDate: "Jun 11",
