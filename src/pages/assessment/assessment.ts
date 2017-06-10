@@ -15,6 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class AssessmentPage {
 
   queued: boolean;
+  available: boolean;
   course: any;
   assessment: any;
 

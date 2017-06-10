@@ -19,7 +19,8 @@
   <h4 [(ngModel)]="course.name" ngDefaultControl>{{ course.name }}</h4>
   <h4 [(ngModel)]="assessment.name" ngDefaultControl>{{ assessment.name }}</h4>
 
-  <button ion-button *ngIf="!queued" (click)="enqueue()">Enqueue</button>
-  <button ion-button *ngIf="queued" (click)="dequeue()">Dequeue</button>
+  <button ion-button *ngIf="!available">Not available</button>
+  <button ion-button *ngIf="!queued && available" (click)="enqueue()">Enqueue</button>
+  <button ion-button *ngIf="queued && available" (click)="dequeue()">Dequeue</button>
 
 </ion-content>
