@@ -6,7 +6,6 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { CoursePage } from '../pages/course/course';
 import { AssessmentPage } from '../pages/assessment/assessment';
-import { InstructorPage } from '../pages/instructor/instructor';
 import { InstructorCoursePage } from '../pages/instructor-course/instructor-course';
 import { NewAssessmentPage } from '../pages/new-assessment/new-assessment';
 
@@ -17,7 +16,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    InstructorPage,
     CoursePage,
     InstructorCoursePage,
     NewAssessmentPage,
@@ -31,7 +29,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    InstructorPage,
     CoursePage,
     InstructorCoursePage,
     NewAssessmentPage,
