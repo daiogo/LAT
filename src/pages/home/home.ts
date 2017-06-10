@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { CoursePage } from '../course/course';
+import { InstructorCoursePage } from '../instructor-course/instructor-course';
 
 @Component({
   selector: 'page-home',
@@ -22,7 +23,7 @@ export class HomePage {
     });
 
     this.coursesAsInstructor.push({
-      name: "Object-oriented Programming",
+      name: "Object-oriented programming",
       code: "CS102"
     });
 
@@ -42,8 +43,8 @@ export class HomePage {
     });
 
     this.coursesAsStudent.push({
-      name: "Analogue Electronics",
-      code: "EE203"
+      name: "Intro to Business",
+      code: "BS101"
     });
 
   }
@@ -56,7 +57,7 @@ export class HomePage {
   }
 
   instructorCourseSelected(course) {
-    this.navCtrl.push(CoursePage, {
+    this.navCtrl.push(InstructorCoursePage, {
       course: course
     });
     //alert(course.name);

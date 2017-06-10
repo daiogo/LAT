@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NewAssessmentPage } from '../new-assessment/new-assessment';
 
 /**
- * Generated class for the InstructorPage page.
+ * Generated class for the InstructorCoursePage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-instructor',
-  templateUrl: 'instructor.html',
+  selector: 'page-instructor-course',
+  templateUrl: 'instructor-course.html',
 })
-export class InstructorPage {
+export class InstructorCoursePage {
 
   course: any;
   assessments: any[];
@@ -46,7 +47,12 @@ export class InstructorPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad InstructorPage');
+    console.log('ionViewDidLoad InstructorCoursePage');
   }
 
+  newAssessment(course) {
+    this.navCtrl.push(NewAssessmentPage, {
+      course: course
+    });
+  }
 }

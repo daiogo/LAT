@@ -4,10 +4,12 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { StudentPage } from '../pages/student/student';
 import { CoursePage } from '../pages/course/course';
 import { AssessmentPage } from '../pages/assessment/assessment';
+import { InstructorPage } from '../pages/instructor/instructor';
+import { InstructorCoursePage } from '../pages/instructor-course/instructor-course';
+import { NewAssessmentPage } from '../pages/new-assessment/new-assessment';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,9 +18,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     StudentPage,
+    InstructorPage,
     CoursePage,
+    InstructorCoursePage,
+    NewAssessmentPage,
     AssessmentPage
   ],
   imports: [
@@ -29,9 +33,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     StudentPage,
+    InstructorPage,
     CoursePage,
+    InstructorCoursePage,
+    NewAssessmentPage,
     AssessmentPage
   ],
   providers: [
