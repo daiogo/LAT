@@ -9,18 +9,17 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Assessment</ion-title>
+    <ion-title [(ngModel)]="course.code" [(ngModel)]="assessment.name" ngDefaultControl>{{ course.code }}: {{ assessment.name }}</ion-title>
   </ion-navbar>
 </ion-header>
 
-
 <ion-content class="assessmentBody" padding>
   
-  <h4 [(ngModel)]="course.name" ngDefaultControl>{{ course.name }}</h4>
-  <h4 [(ngModel)]="assessment.name" ngDefaultControl>{{ assessment.name }}</h4>
+  <h5 [(ngModel)]="course.code" [(ngModel)]="course.name" ngDefaultControl>{{ course.code }}: {{ course.name }}</h5>
+  <h5 [(ngModel)]="assessment.name" ngDefaultControl>{{ assessment.name }}</h5>
 
-  <button ion-button *ngIf="!available">Not available</button>
-  <button ion-button *ngIf="!queued && available" (click)="enqueue()">Enqueue</button>
-  <button ion-button *ngIf="queued && available" (click)="dequeue()">Dequeue</button>
+  <button ion-button class="assessmentQueueButtons notAvailableButton" *ngIf="!assessment.available">Not available</button>
+  <button ion-button class="assessmentQueueButtons enqueueButton" *ngIf="!assessment.queued && assessment.available" (click)="enqueue(assessment)">Enqueue</button>
+  <button ion-button class="assessmentQueueButtons dequeueButton" *ngIf="assessment.queued && assessment.available" (click)="dequeue(assessment)">Dequeue</button>
 
 </ion-content>

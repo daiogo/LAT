@@ -14,37 +14,35 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AssessmentPage {
 
-  queued: boolean;
-  available: boolean;
   course: any;
   assessment: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.queued = false; // Get data from backend later
-    //this.course = NavParams.course;
-    //this.assessment = NavParams.assessment;
 
-    this.course = {
+    this.course = navParams.get('course');
+    this.assessment = navParams.get('assessment');
+
+/*    this.course = {
       name: "Intro to CS",
       code: "CS101"
     };
     this.assessment = {
       name: "Lab 1"
-    };
+    };*/
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AssessmentPage');
   }
 
-  enqueue() {
-    this.queued = true;
+  enqueue(assessment) {
+    assessment.queued = true;
     // Call backend to change db
     alert("You just entered the queue!");
   }
 
-  dequeue() {
-    this.queued = false;
+  dequeue(assessment) {
+    assessment.queued = false;
     // Call backend to change db
     alert("You removed yourself from the queue!");
   }

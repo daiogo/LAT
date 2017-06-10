@@ -1,3 +1,21 @@
 page-course {
 
 }
+
+.notAvailableButton {
+    background-color: red;
+}
+
+.dequeueButton {
+    background-color: white;
+    color: #488AFF;
+    border: 1px solid #488AFF;
+}
+
+.enqueueButton {
+
+}
+
+.courseQueueButtons {
+    float: right;
+}
