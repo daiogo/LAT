@@ -13,7 +13,12 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
+
+  <ion-list>
+    <button ion-item *ngFor="let course of courses" (click)="itemSelected(course)">
+      {{ course.code }}: {{ course.name }}
+    </button>
+  </ion-list>
 
 </ion-content>
