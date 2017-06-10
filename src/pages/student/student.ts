@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CoursePage } from '../course/course';
 
 /**
  * Generated class for the StudentPage page.
@@ -37,6 +38,9 @@ export class StudentPage {
   }
 
   itemSelected(course) {
-    alert(course.name);
+    this.navCtrl.push(CoursePage, {
+      course: course
+    });
+    //alert(course.name);
   }
 }
