@@ -15,7 +15,7 @@
 
 <ion-content padding>
 
-  <ion-item *ngFor="let assessment of assessments">
+  <ion-item *ngFor="let assessment of assessments" (click)="assessmentSelected(assessment)">
     <h2>{{ assessment.name }}</h2>
     <p>Due date: {{ assessment.name }}</p>
     <button ion-button *ngIf="!assessment.available">Not available</button>

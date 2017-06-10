@@ -32,7 +32,7 @@ export class CoursePage {
     this.assessments.push({
       name: "Lab 2",
       queued: false,
-      available: false
+      available: true
     });
 
     this.assessments.push({
