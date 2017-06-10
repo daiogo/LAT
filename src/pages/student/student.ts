@@ -14,11 +14,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class StudentPage {
 
+  courses: any[];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
+    this.courses = [];
+    
+    this.courses.push({
+      name: "Intro to CS",
+      code: "CS101"
+    });
+
+    this.courses.push({
+      name: "Object-oriented Programming",
+      code: "CS102"
+    });
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StudentPage');
   }
 
+  itemSelected(course) {
+    alert(course.name);
+  }
 }
