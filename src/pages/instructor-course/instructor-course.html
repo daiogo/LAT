@@ -16,7 +16,9 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item *ngFor="let assessment of assessments" (click)="assessmentSelected(assessment)">
+    <ion-item *ngFor="let assessment of assessments" (click)="instructorAssessmentSelected(assessment)">
+      <button ion-button item-end *ngIf="!assessment.enabled" (click)="enableQueue(assessment)">Enable queue</button>
+      <button ion-button item-end class="complementButton" *ngIf="assessment.enabled" (click)="disableQueue(assessment)">Disable queue</button>
       <h2>{{ assessment.name }}</h2>
       <p>Due date: {{ assessment.dueDate }}</p>
     </ion-item>

@@ -28,21 +28,21 @@ export class CoursePage {
       name: "Lab 1",
       dueDate: "Jun 11",
       queued: false,
-      available: true
+      enabled: true
     });
 
     this.assessments.push({
       name: "Lab 2",
       dueDate: "Jul 23",
       queued: false,
-      available: true
+      enabled: true
     });
 
     this.assessments.push({
       name: "Final project",
       dueDate: "Sep 05",
       queued: false,
-      available: false
+      enabled: false
     });
 
   }

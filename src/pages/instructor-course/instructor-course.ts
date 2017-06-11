@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NewAssessmentPage } from '../new-assessment/new-assessment';
+import { InstructorAssessmentPage } from '../instructor-assessment/instructor-assessment';
 
 /**
  * Generated class for the InstructorCoursePage page.
@@ -27,22 +28,19 @@ export class InstructorCoursePage {
     this.assessments.push({
       name: "Lab 1",
       dueDate: "Jun 11",
-      queued: false,
-      available: true
+      enabled: true
     });
 
     this.assessments.push({
       name: "Lab 2",
       dueDate: "Jul 23",
-      queued: false,
-      available: true
+      enabled: false
     });
 
     this.assessments.push({
       name: "Final project",
       dueDate: "Sep 05",
-      queued: false,
-      available: false
+      enabled: false
     });
   }
 
@@ -54,5 +52,25 @@ export class InstructorCoursePage {
     this.navCtrl.push(NewAssessmentPage, {
       course: course
     });
+  }
+
+  instructorAssessmentSelected(assessment) {
+    this.navCtrl.push(InstructorAssessmentPage, {
+      course: this.course,
+      assessment: assessment
+    });
+    //alert(course.name);
+  }
+
+  enableQueue(assessment) {
+    assessment.enabled = true;
+    // Call backend to change db
+    alert("You just enabled the queue!");
+  }
+
+  disableQueue(assessment) {
+    assessment.enabled = false;
+    // Call backend to change db
+    alert("You just disabled the queue!");
   }
 }

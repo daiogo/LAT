@@ -7,12 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>instructor-assessment</ion-title>
+    <ion-title [(ngModel)]="course.code" [(ngModel)]="assessment.name" ngDefaultControl>{{ course.code }}: {{ assessment.name }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="centeredText" padding>
+
+  <button ion-button item-end class="wideButtons" *ngIf="!assessment.enabled" (click)="enableQueue(assessment)">Enable queue</button>
+  <button ion-button item-end class="wideButtons complementButton" *ngIf="assessment.enabled" (click)="disableQueue(assessment)">Disable queue</button>
+  <button ion-button class="wideButtons" (click)="viewQueue(assessment)">View queue</button>
 
 </ion-content>

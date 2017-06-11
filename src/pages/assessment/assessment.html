@@ -13,13 +13,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="assessmentBody" padding>
+<ion-content class="centeredText" padding>
   
+  <h3 [(ngModel)]="assessment.name" ngDefaultControl>{{ assessment.name }}</h3>
   <h5 [(ngModel)]="course.code" [(ngModel)]="course.name" ngDefaultControl>{{ course.code }}: {{ course.name }}</h5>
-  <h5 [(ngModel)]="assessment.name" ngDefaultControl>{{ assessment.name }}</h5>
 
-  <button ion-button class="assessmentQueueButtons notAvailableButton" *ngIf="!assessment.available">Not available</button>
-  <button ion-button class="assessmentQueueButtons enqueueButton" *ngIf="!assessment.queued && assessment.available" (click)="enqueue(assessment)">Enqueue</button>
-  <button ion-button class="assessmentQueueButtons dequeueButton" *ngIf="assessment.queued && assessment.available" (click)="dequeue(assessment)">Dequeue</button>
+
+  <button ion-button class="wideButtons redButton" *ngIf="!assessment.enabled">Not enabled</button>
+  <button ion-button class="wideButtons" *ngIf="!assessment.queued && assessment.enabled" (click)="enqueue(assessment)">Enqueue</button>
+  <button ion-button class="wideButtons complementButton" *ngIf="assessment.queued && assessment.enabled" (click)="dequeue(assessment)">Dequeue</button>
 
 </ion-content>

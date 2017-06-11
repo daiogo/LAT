@@ -17,9 +17,9 @@
 
   <ion-list>
     <ion-item *ngFor="let assessment of assessments" (click)="assessmentSelected(assessment)">
-      <button ion-button item-end class="courseQueueButtons notAvailableButton" *ngIf="!assessment.available">Not available</button>
-      <button ion-button item-end class="courseQueueButtons enqueueButton" *ngIf="!assessment.queued && assessment.available" (click)="enqueue(assessment)">Enqueue</button>
-      <button ion-button item-end class="courseQueueButtons dequeueButton" *ngIf="assessment.queued && assessment.available" (click)="dequeue(assessment)">Dequeue</button>
+      <button ion-button item-end class="courseQueueButtons redButton" *ngIf="!assessment.enabled">Not enabled</button>
+      <button ion-button item-end class="courseQueueButtons" *ngIf="!assessment.queued && assessment.enabled" (click)="enqueue(assessment)">Enqueue</button>
+      <button ion-button item-end class="courseQueueButtons complementButton" *ngIf="assessment.queued && assessment.enabled" (click)="dequeue(assessment)">Dequeue</button>
       <h2>{{ assessment.name }}</h2>
       <p>Due date: {{ assessment.dueDate }}</p>
     </ion-item>

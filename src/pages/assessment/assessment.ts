@@ -21,14 +21,7 @@ export class AssessmentPage {
 
     this.course = navParams.get('course');
     this.assessment = navParams.get('assessment');
-
-/*    this.course = {
-      name: "Intro to CS",
-      code: "CS101"
-    };
-    this.assessment = {
-      name: "Lab 1"
-    };*/
+    
   }
 
   ionViewDidLoad() {

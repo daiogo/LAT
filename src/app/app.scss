@@ -14,3 +14,22 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.wideButtons {
+    width: 90%;
+}
+
+
+.centeredText {
+    text-align: center;
+}
+
+.complementButton {
+    background-color: white;
+    color: #488AFF;
+    border: 1px solid #488AFF;
+}
+
+.redButton {
+    background-color: red;
+}

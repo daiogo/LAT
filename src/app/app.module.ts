@@ -8,6 +8,9 @@ import { CoursePage } from '../pages/course/course';
 import { AssessmentPage } from '../pages/assessment/assessment';
 import { InstructorCoursePage } from '../pages/instructor-course/instructor-course';
 import { NewAssessmentPage } from '../pages/new-assessment/new-assessment';
+import { InstructorAssessmentPage } from '../pages/instructor-assessment/instructor-assessment';
+import { QueuePage } from '../pages/queue/queue';
+import { MarkingSheetPage } from '../pages/marking-sheet/marking-sheet';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +22,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CoursePage,
     InstructorCoursePage,
     NewAssessmentPage,
-    AssessmentPage
+    InstructorAssessmentPage,
+    AssessmentPage,
+    QueuePage,
+    MarkingSheetPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CoursePage,
     InstructorCoursePage,
     NewAssessmentPage,
-    AssessmentPage
+    InstructorAssessmentPage,
+    AssessmentPage,
+    QueuePage,
+    MarkingSheetPage
   ],
   providers: [
     StatusBar,
