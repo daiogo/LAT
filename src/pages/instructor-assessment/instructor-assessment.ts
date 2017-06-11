@@ -40,13 +40,13 @@ export class InstructorAssessmentPage {
   enableQueue(assessment) {
     assessment.enabled = true;
     // Call backend to change db
-    alert("You just enabled the queue!");
+    //alert("You just enabled the queue!");
   }
 
   disableQueue(assessment) {
     assessment.enabled = false;
     // Call backend to change db
-    alert("You just disabled the queue!");
+    //alert("You just disabled the queue!");
   }
 
 }

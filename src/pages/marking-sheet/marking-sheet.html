@@ -13,6 +13,43 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+  <ion-list>
+
+    <ion-item-group>
+
+<!--
+      <ion-item-divider color="light">
+        Marking criteria
+        <button ion-button item-end (click)="">Add note</button>
+      </ion-item-divider>
+-->
+      <ion-grid>
+
+        <ion-row >
+
+          <ion-col col-6 *ngFor="let criterion of criteria">
+            <ion-item>
+              <ion-label stacked>{{ criterion.name }} ({{ criterion.marksPossible }})</ion-label>
+              <ion-input type="select" [(ngModel)]="criterion.marksAwarded" (change)="onChange()"></ion-input>
+            </ion-item>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-grid>
+      
+    </ion-item-group>
+
+  </ion-list>
+
+  <div text-center margin-bottom="5px">
+    {{ student.name }} scored {{ average }} out of {{ ace }}.
+  </div>
+
+  <div text-center>
+    <button ion-button class="wideButtons" (click)="submitAssessment()">Submit Assessment</button>
+  </div>
 
 </ion-content>

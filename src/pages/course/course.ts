@@ -60,13 +60,13 @@ export class CoursePage {
   enqueue(assessment) {
     assessment.queued = true;
     // Call backend to change db
-    alert("You just entered the queue!");
+    //alert("You just entered the queue!");
   }
 
   dequeue(assessment) {
     assessment.queued = false;
     // Call backend to change db
-    alert("You removed yourself from the queue!");
+    //alert("You removed yourself from the queue!");
   }
 
 }

@@ -26,31 +26,38 @@ export class QueuePage {
     this.students = [];
 
     this.students.push({
-      name: "Diogo Freitas"
+      name: "Diogo Freitas",
+      assessed: false
     });
 
     this.students.push({
-      name: "Diego Lee"
+      name: "Diego Lee",
+      assessed: false
     });
 
     this.students.push({
-      name: "Luis Fernando"
+      name: "Luis Fernando",
+      assessed: false
     });
 
     this.students.push({
-      name: "Tiago Nagy"
+      name: "Tiago Nagy",
+      assessed: false
     });
 
     this.students.push({
-      name: "Mauro Zanella"
+      name: "Mauro Zanella",
+      assessed: false
     });
 
     this.students.push({
-      name: "Costanza Cascelli"
+      name: "Costanza Cascelli",
+      assessed: false
     });
 
     this.students.push({
-      name: "Markus Birk"
+      name: "Markus Birk",
+      assessed: false
     });
 
   }
