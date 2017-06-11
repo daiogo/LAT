@@ -20,7 +20,7 @@
 
     <ion-item-group>
       <ion-item-divider color="light">As instructor</ion-item-divider>
-      <button ion-item *ngFor="let course of coursesAsInstructor" (click)="instructorCourseSelected(course)">
+      <button ion-item *ngFor="let course of coursesAsInstructor" (click)="instructorCourseSelected(course, newAssessment)">
         {{ course.code }}: {{ course.name }}
       </button>
     </ion-item-group>

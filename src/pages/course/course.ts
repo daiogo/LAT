@@ -26,25 +26,24 @@ export class CoursePage {
     // Test dummy data
     this.assessments.push({
       name: "Lab 1",
-      dueDate: "Jun 11",
-      queued: false,
-      enabled: true
+      dueDate: "2017-06-11",
+      enabled: true,
+      queued: false
     });
 
     this.assessments.push({
       name: "Lab 2",
-      dueDate: "Jul 23",
-      queued: false,
-      enabled: true
+      dueDate: "2017-07-04",
+      enabled: true,
+      queued: false
     });
 
     this.assessments.push({
       name: "Final project",
-      dueDate: "Sep 05",
+      dueDate: "2017-09-12",
+      enabled: false,
       queued: false,
-      enabled: false
     });
-
   }
 
   ionViewDidLoad() {

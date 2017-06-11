@@ -56,9 +56,10 @@ export class HomePage {
     //alert(course.name);
   }
 
-  instructorCourseSelected(course) {
+  instructorCourseSelected(course, newAssessment) {
     this.navCtrl.push(InstructorCoursePage, {
-      course: course
+      course: course,
+      newAssessment: false
     });
     //alert(course.name);
   }

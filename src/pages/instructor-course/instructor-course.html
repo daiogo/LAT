@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
   <ion-list>
     <ion-item *ngFor="let assessment of assessments" (click)="instructorAssessmentSelected(assessment)">
@@ -24,7 +24,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-fab right bottom (click)="newAssessment(course)">
+  <ion-fab right bottom (click)="addNewAssessment(course)">
     <button ion-fab><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 

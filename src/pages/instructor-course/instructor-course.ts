@@ -18,37 +18,50 @@ export class InstructorCoursePage {
 
   course: any;
   assessments: any[];
+  newAssessment: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     
+    this.newAssessment = {};
     this.course = this.navParams.get('course');
+
     this.assessments = []; // Call for backend later
 
     // Test dummy data
     this.assessments.push({
       name: "Lab 1",
-      dueDate: "Jun 11",
+      dueDate: "2017-06-11",
       enabled: true
     });
 
     this.assessments.push({
       name: "Lab 2",
-      dueDate: "Jul 23",
+      dueDate: "2017-07-04",
       enabled: false
     });
 
     this.assessments.push({
       name: "Final project",
-      dueDate: "Sep 05",
+      dueDate: "2017-09-12",
       enabled: false
     });
+
+    if (this.navParams.get('newAssessment') != false) {
+      this.newAssessment = this.navParams.get('newAssessment');
+      this.assessments.push({
+        name: this.newAssessment.name,
+        dueDate: this.newAssessment.dueDate,
+        enabled: false
+      });
+    }
+    
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InstructorCoursePage');
   }
 
-  newAssessment(course) {
+  addNewAssessment(course) {
     this.navCtrl.push(NewAssessmentPage, {
       course: course
     });

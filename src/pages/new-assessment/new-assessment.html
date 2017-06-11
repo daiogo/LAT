@@ -13,6 +13,59 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content >
+
+  <ion-list>
+
+    <ion-item-group>
+      <ion-item-divider color="light">Details</ion-item-divider>
+      <ion-item>
+        <ion-label stacked>Assessment name</ion-label>
+        <ion-input type="text" [(ngModel)]="assessmentName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Due date</ion-label>
+        <!--<ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="time"></ion-datetime>-->
+        <ion-datetime displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="assessmentDueDate"></ion-datetime>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="light">
+        Marking criteria
+        <button ion-button item-end (click)="addCriterion()">Add criterion</button>
+      </ion-item-divider>
+
+      <ion-grid *ngFor="let criterion of assessmentCriteria">
+        <ion-row>
+
+          <ion-col col-6>
+            <ion-item>
+              <ion-label stacked>Criterion name</ion-label>
+              <ion-input type="text" [(ngModel)]="criterionName"></ion-input>
+            </ion-item>
+          </ion-col>
+
+          <ion-col col-6>
+            <ion-item>
+              <ion-label stacked>Max marks</ion-label>
+              <ion-input type="text" [(ngModel)]="criterionMarks"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      
+    </ion-item-group>
+
+  </ion-list>
+
+  <!--<ion-fab right bottom (click)="newCriterion()">
+    <button ion-fab><ion-icon name="add"></ion-icon></button>
+  </ion-fab>-->
+  <div class="centeredText">
+    <button ion-button class="wideButtons" (click)="addNewAssessment(course, newAssessment)">Add new assessment</button>
+  </div>
 
 </ion-content>
